@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 800px;
+            width: 100vw;
+            border:2px solid black;
+            display: grid;
+           
+            grid-template-areas: "search search"
+                                    "nav nav"
+                                    "vnav maincontent"
+                                    "footer footer";
+            grid-template-rows: 1fr 1fr 7fr 0.5fr;
+            grid-template-columns: 2fr 8fr;
+        }
+        .nav{
+            background-color: rgb(104, 104, 175);
+            grid-area: nav;
+            border: 2px solid black;
+            display: grid;
+            grid-template-areas: "nav1 nav2 nav3 nav4 nav5";
+          
+        }
+        .nav1{
+            border: 2px solid black;
+            grid-area: nav1;
+            text-align: center;
+            color: white;
+            height: 30px;
+            padding:15px
+        }
+        .nav1:hover > .dropdowncontent{
+            display: block;
+           
+        }
+        .nav2{
+            border: 2px solid black;
+            grid-area: nav2;
+            text-align: center;
+            color: white;
+            font-weight: 800;
+            padding:15px
+        }
+        .nav2:hover > .dropdowncontent{
+            display: block; 
+        }
+        .dropdowncontent{
+            display: none;
+            position: absolute;
+            background-color: white;
+            width: 200px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+        }
+        .nav3{
+            border: 2px solid black;
+            grid-area: nav3;
+            text-align: center;
+            color: white;
+            font-weight: 800;
+            padding:15px
+        }
+        .nav4{
+            border: 2px solid black;
+            grid-area: nav4;
+            text-align: center;
+            color: white;
+            font-weight: 800;
+            padding:15px
+        }
+        .nav5{
+            border: 2px solid black;
+            grid-area: nav5;
+            text-align: center;
+            color: white;
+            font-weight: 800;
+            padding:15px
+        }
+        .vnav{
+          
+            background-color: rgb(119, 119, 155);
+            grid-area:vnav ;
+            border: 2px solid black;
+          
+            
+        }
+        
+        .maincontent{
+            background-color: white;
+            grid-area:maincontent;
+            border: 2px solid black;
+          
+           
+        }
+          
+        
+        .search {
+            background-color: grey;
+            grid-area: search;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+            #button1{
+                height: 40px;
+                width: 35px;
+                border-radius: 10px;
+                margin-top: 10px;
+                color: black;   
+            }
+            #id1{
+                height: 30px;
+                width: 300px;
+                margin-top: 5px;
+                border-radius: 10px;
+            }
+            
+        .b{
+            height: 90px;
+            
+            margin: 15px;
+           
+            width: 250px;
+            background-color: black;
+        }
+        .b:hover{
+            background-color: gray;
+        }
+        a{
+            text-decoration: none;
+            font-size: medium;
+            color: white;
+            font-weight: 800;
+        }
+        .card{
+            height: 290px;
+            width: 275px;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+            display: inline-block;
+            margin: 5px;
+            transition: all 0.3s ease;   
+        }
+        .card:hover{
+       transform: scale(1.05);
+       box-shadow: 0 4px 15px grey;
+        }
+        img{
+            border-radius: 10px;
+            height: 210px;
+            width: 275px;
+        }
+        #foot{
+           display: flex;
+           
+        }
+        .footer{
+            display: flex;
+            justify-content: flex-end;
+            background-color: rgb(102, 107, 107);
+            grid-area:footer;
+            border: 2px solid black;
+           
+        }
+       
+            
+        
+        .footer #foot img:hover{
+            transform: scale(1.1);
+           
+           
+        }
+
+        .content  .card:hover{
+            transform:  scale(1.1);
+        }
+        .vnav button:hover{
+            box-shadow: 4px 4px 8px white ;
+            
+        }
+        .fimg{
+            height: 70px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+            <input type="text" placeholder="Search here" id="id1">
+            <button id="button1"><a href="#">Go</a></button>
+        </div>
+        <div class="nav">
+            <div class="nav1">
+                <div class="dropbtn">By city</div>
+                <div class="dropdowncontent">
+                   
+                    <ul type="none">
+                        <li> India</li>
+                        <li> US</li>
+                        <li> Chicango</li>
+                        <li> japan</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="nav2">
+                <div class="dropbtn">By Model</div>
+                <div class="dropdowncontent">
+                  
+                    <ul type="none">
+                        <li>SUV car model</li>
+                        <li>Electric car model</li>
+                        <li>Sedans car model</li>
+                        <li>Hatchbacks car model</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="nav3">
+                <a href="https://www.hyundai.com/in/en">click to Buy </a>
+
+            </div>
+            <div class="nav4">Smart finance</div>
+            <div class="nav5">Smart locator</div>
+
+           
+
+    </div>
+    <div class="vnav">
+            <button class="b"> <a href="C:\Users\Rutuja\OneDrive\Desktop\StudentManagement-System-dbms-miniproject-main (1)\StudentManagement-System-dbms-miniproject-main\student management\intership\harri.avif">Harrier</a></button>
+            <button class="b"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/09/2024-BMW-i7-M70-first-drive-3-scaled.jpg">BMW</a></button>
+            <button class="b"><a href="https://www.cartoq.com/wp-content/uploads/2021/07/Jaguar-XF-used-featured.jpg">Jaguar</a></button>
+            <button class="b"><a href="C:\Users\Rutuja\OneDrive\Desktop\StudentManagement-System-dbms-miniproject-main (1)\StudentManagement-System-dbms-miniproject-main\student management\intership\Rolls royce1.jpg">Rolls royce</a></button>
+            <button class="b"><a href="https://vehicle-images.dealerinspire.com/7312-18003550/thumbnails/large/W1NKM4HBXSF269299/297dec4df6d9c7792de8eb7bcc858220.jpg">Mercedes benz</a></button>
+    </div>
+    <div class="maincontent">
+        <div class="card">
+            <img src="car.jpg" alt="car">
+            <p>Bugatti <br>RS 41cr</p>
+           
+           
+        </div>
+        <div class="card">
+            <img src="C:\Users\Rutuja\OneDrive\Desktop\StudentManagement-System-dbms-miniproject-main (1)\StudentManagement-System-dbms-miniproject-main\student management\intership\suvs.avif" alt="car">
+            <p>Suvs <br>RS 1500000 </p>
+       
+           
+        </div>
+        <div class="card">
+            <img src="car2.jpg" alt="car">
+            <p>porsche<br>RS 4.26</p>
+          
+           
+        </div>
+        <div class="card">
+            <img src="car3.jpg" alt="car">
+            <p>Thar <br>RS 2500000</p>
+            
+           
+        </div>
+        <div class="card">
+            <img src="car4.jpg" alt="car">
+            <p>BMW <br>RS 2 crore</p>
+           
+           
+        </div>
+        <div class="card">
+            <img src="car5.jpg" alt="car">
+            <p>Racing Car <br>RS 100000</p>
+            
+           
+        </div>
+        <div class="card">
+            <img src="bmw.jpg" alt="car">
+            <p>BMW <br>RS 2.60 crore</p>
+            
+           
+        </div>
+        <div class="card">
+            <img src="C:\Users\Rutuja\OneDrive\Desktop\StudentManagement-System-dbms-miniproject-main (1)\StudentManagement-System-dbms-miniproject-main\student management\intership\f harri.webp" alt="car">
+            <p>Harrier <br>RS 3500000</p>
+            
+           
+        </div>
+        
+    </div>
+    <div class="footer">
+        
+        <a href="https://www.instagram.com/rutuja_jagadale5412?igsh=djRjMGZyaGltM2ky" target="_blank"><img class ="fimg" src="C:\Users\Rutuja\OneDrive\Desktop\StudentManagement-System-dbms-miniproject-main (1)\StudentManagement-System-dbms-miniproject-main\student management\intership\instagram.jpg" alt="" height="46" width="50" id="img1"></a>
+            <a href="https://www.linkedin.com/in/rutuja-jagdale-52116a34b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img class ="fimg" src="C:\Users\Rutuja\OneDrive\Desktop\StudentManagement-System-dbms-miniproject-main (1)\StudentManagement-System-dbms-miniproject-main\student management\intership\linkdin.png" alt="" height="50" width="50"></a>
+    </div>
+
+    </div>
+    
+    
+</body>
+</html>
